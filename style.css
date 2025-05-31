@@ -1,0 +1,136 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 200vh;
+}
+
+.container{
+    width: 100%;
+    height: 100px;
+    background: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+   backdrop-filter: blur(12px);
+}
+
+nav a{
+    color: black;
+    font-size: 22px;
+    font-style: bold;
+    text-decoration: none;
+    padding: 30px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+nav{
+    margin-right: 80px;
+}
+
+#logo{
+     color: black;
+    font-size: 30px;
+    font-style: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    margin: 80px;
+    font-weight: 700;
+}
+
+.hero{
+    margin-top: 140px;
+}
+.hero h1{
+    text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+}
+
+.hero p{
+    font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.images{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+img{
+    height: 300px;
+    border: 1px solid black;
+}
+
+
+.icons{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: none;
+    position: absolute;
+    right: 5%;
+}
+
+#check{
+    display: none;
+}
+
+@media screen and (max-width:1050px){
+    nav a{
+
+    padding: 10px;
+    
+    }  
+
+}
+@media screen and (max-width:950px){
+    nav a{
+
+    padding: 5px;
+    
+    }  
+
+}
+@media screen and (max-width:850px){
+    .icons{
+        display: flex;
+        margin-right: 20px;
+    }
+    nav{
+        display: none;
+    }
+    #cancel{
+        display: none;
+    }
+    #check:checked~ .icons #menu{
+        display: none;
+    }
+    #check:checked~ .icons #cancel{
+        display: block;
+    }
+    #check:checked~ nav{
+        display: block;
+        height: 15rem;
+    }
+    nav{
+        display: none;
+        position: absolute;
+        top: 100px;
+        background-color: rgb(187, 187, 187);
+        width: 100%;
+    }
+    nav a{
+        display: block;
+        text-align: center;
+        margin: 8px;
+    }
+
+}
